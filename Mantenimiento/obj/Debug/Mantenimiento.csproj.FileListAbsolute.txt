@@ -1,0 +1,10 @@
+C:\Users\Crowley\source\repos\Mantenimiento\Mantenimiento\bin\Debug\Mantenimiento.exe.config
+C:\Users\Crowley\source\repos\Mantenimiento\Mantenimiento\bin\Debug\Mantenimiento.exe
+C:\Users\Crowley\source\repos\Mantenimiento\Mantenimiento\bin\Debug\Mantenimiento.pdb
+C:\Users\Crowley\source\repos\Mantenimiento\Mantenimiento\obj\Debug\Mantenimiento.csprojAssemblyReference.cache
+C:\Users\Crowley\source\repos\Mantenimiento\Mantenimiento\obj\Debug\Mantenimiento.Form1.resources
+C:\Users\Crowley\source\repos\Mantenimiento\Mantenimiento\obj\Debug\Mantenimiento.Properties.Resources.resources
+C:\Users\Crowley\source\repos\Mantenimiento\Mantenimiento\obj\Debug\Mantenimiento.csproj.GenerateResource.cache
+C:\Users\Crowley\source\repos\Mantenimiento\Mantenimiento\obj\Debug\Mantenimiento.csproj.CoreCompileInputs.cache
+C:\Users\Crowley\source\repos\Mantenimiento\Mantenimiento\obj\Debug\Mantenimiento.exe
+C:\Users\Crowley\source\repos\Mantenimiento\Mantenimiento\obj\Debug\Mantenimiento.pdb
