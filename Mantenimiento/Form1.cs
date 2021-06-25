@@ -18,24 +18,6 @@ namespace Mantenimiento
             InitializeComponent();
         }
 
-        /*ClassConexion obj_conexion = new ClassConexion();
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            obj_conexion.setCodigo(int.Parse(txtCodigo2.Text));
-            obj_conexion.buscar(dataGridView1);
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            obj_conexion.setNombre(txtNombre.Text);
-            obj_conexion.setApellido(txtApellido.Text);
-            obj_conexion.setEdad(int.Parse(txtEdad.Text));
-            obj_conexion.setDireccion(txtDireccion.Text);
-            obj_conexion.setDepartamento(txtDepartamento.Text);
-            obj_conexion.insertar();
-            Hide();
-        }*/
-
     ClassDbObject obj_DBconexion = new ClassDbObject();
     private void btnBuscar_Click(object sender, EventArgs e)
     {
@@ -97,6 +79,11 @@ namespace Mantenimiento
         {
             obj_DBconexion.setCodigo(int.Parse(txtCodigo.Text));
             obj_DBconexion.eliminar(dataGridView1);
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

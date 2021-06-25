@@ -17,11 +17,10 @@ namespace Mantenimiento
         {
             try
             {
-
                 SqlCommand cmd = new SqlCommand();//Instruccion Transacqt-SQL o procedimiento almacenado que se ejecuta en una BD SQLServer
+
                 cmd.Connection = ctx.getConect();
-                ctx.getConect().Open();
-                //conect.Open();
+
                 cmd.CommandText = ("insertar");//Nombre del procedimiento almacenado
                 cmd.CommandType = CommandType.StoredProcedure;//Tipo de comando, en este caso, procedimiento almacenado
                 cmd.Parameters.Add("@nombre", SqlDbType.VarChar, 50);
@@ -42,7 +41,6 @@ namespace Mantenimiento
 
                 Form1 obj = new Form1();
                 obj.Show();
-                ctx.getConect().Close();
 
             }
             catch (Exception e)
@@ -56,10 +54,8 @@ namespace Mantenimiento
         {
             try
             {
-                //SqlConnection conect = new SqlConnection(@"Data Source=DESKTOP-32EVP44\SQLEXPRESS;Initial Catalog=empleados;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand();//Instruccion Transacqt-SQL o procedimiento almacenado que se ejecuta en una BD SQLServer
                 cmd.Connection = ctx.getConect();
-                //conect.Open();
                 cmd.CommandText = ("actualizar");//Nombre del procedimiento almacenado
                 cmd.CommandType = CommandType.StoredProcedure;//Tipo de comando, en este caso, procedimiento almacenado
                 cmd.Parameters.Add("@codigo", SqlDbType.Int);
@@ -81,8 +77,6 @@ namespace Mantenimiento
                 Form1 obj = new Form1();
                 obj.Show();//Aparece otro formulario
                 MessageBox.Show("Datos actualizados");
-                //ctx.getConect().Close();
-
             }
             catch (Exception e)
             {
@@ -95,12 +89,10 @@ namespace Mantenimiento
         {
             try
             {
-                //SqlConnection conect = new SqlConnection(@"Data Source=DESKTOP-32EVP44\SQLEXPRESS;Initial Catalog=empleados;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand();//Instruccion Transacqt-SQL o procedimiento almacenado que se ejecuta en una BD SQLServer
                 SqlDataAdapter dAdapter;//Adaptar datos al grid
                 DataTable dTable = new DataTable();//Rellenar el grid
                 cmd.Connection = ctx.getConect();
-                //conect.Open();
                 cmd.CommandText = "buscar";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@codigo", SqlDbType.Int);
@@ -122,12 +114,10 @@ namespace Mantenimiento
         {
             try
             {
-                //SqlConnection conect = new SqlConnection(@"Data Source=DESKTOP-32EVP44\SQLEXPRESS;Initial Catalog=empleados;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand();//Instruccion Transacqt-SQL o procedimiento almacenado que se ejecuta en una BD SQLServer
                 SqlDataAdapter dAdapter;//Adaptar datos al grid
                 DataTable dTable = new DataTable();//Rellenar el grid
                 cmd.Connection = ctx.getConect();
-                //conect.Open();
                 cmd.CommandText = "eliminar";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@codigo", SqlDbType.Int);
@@ -154,11 +144,7 @@ namespace Mantenimiento
                 SqlDataAdapter da;//Adaptar datos al grid
                 DataTable table = new DataTable();//Rellenar el grid
                 cmd.Connection = ctx.getConect();
-                //conect.Open();
                 cmd.CommandText = "select * from datos";
-                /*cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@codigo", SqlDbType.Int);
-                cmd.Parameters["@codigo"].Value = codigo;*/
 
                 da = new SqlDataAdapter(cmd);
                 da.Fill(table);//Agrega filas a table o lads actualiza para hacerlas coincidir con el modelo de datos
