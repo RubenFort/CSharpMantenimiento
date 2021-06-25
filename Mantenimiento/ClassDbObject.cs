@@ -20,7 +20,7 @@ namespace Mantenimiento
 
                 SqlCommand cmd = new SqlCommand();//Instruccion Transacqt-SQL o procedimiento almacenado que se ejecuta en una BD SQLServer
                 cmd.Connection = ctx.getConect();
-                //ctx.getConect().Open();
+                ctx.getConect().Open();
                 //conect.Open();
                 cmd.CommandText = ("insertar");//Nombre del procedimiento almacenado
                 cmd.CommandType = CommandType.StoredProcedure;//Tipo de comando, en este caso, procedimiento almacenado
@@ -81,7 +81,7 @@ namespace Mantenimiento
                 Form1 obj = new Form1();
                 obj.Show();//Aparece otro formulario
                 MessageBox.Show("Datos actualizados");
-                ctx.getConect().Close();
+                //ctx.getConect().Close();
 
             }
             catch (Exception e)
